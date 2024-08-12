@@ -15,6 +15,7 @@ export type ActionCreator<TPayload = AnyActionPayload> = (
   payload: TPayload extends AnyActionPayload ? any : never
 ) => AnyAction
 
+// WRITTEN BY ANOTHER DEVELOPER
 export type TransformActionsCreatorMapObjectToActionUnion<TActions> = TActions[keyof TActions] extends ActionCreator
   ? TActions[keyof TActions] extends ActionCreator<ReturnType<TActions[keyof TActions]>['payload']>
     ? ReturnType<TActions[keyof TActions]>

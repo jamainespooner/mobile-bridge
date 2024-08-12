@@ -1,3 +1,4 @@
+// THIS FILE WAS CO-WRITTEN BY ANOTHER DEVELOPER
 import * as React from 'react'
 import { useLayoutEffect, useMemo, useRef } from 'react'
 
@@ -29,6 +30,7 @@ export function useSubscribeToMobileBridgeAction<
   TNativeActions extends AnyAction = AnyAction,
   U extends keyof State<TNativeActions> = AnyAction['type']
 >(callback: (action: State<TNativeActions>[U]) => void, type: U): void
+
 export function useSubscribeToMobileBridgeAction<
   TNativeActions extends AnyAction = AnyAction,
   U extends keyof State<TNativeActions> = AnyAction['type']
